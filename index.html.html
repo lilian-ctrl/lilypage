@@ -1,0 +1,470 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> Lilian first web page </title>
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  color: #34495e;
+  margin: 30px 0 15px 0;
+  font-size: 1.8rem;
+  border-bottom: 3px solid purple;
+  padding-bottom: 10px;
+}
+
+h5 {
+  color: #2c3e50;
+  margin: 10px 0 5px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Navigation */
+ul:first-of-type {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul:first-of-type li {
+  list-style: none;
+  margin: 10px 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+ul:first-of-type li:last-child {
+  border-bottom: none;
+}
+
+ul:first-of-type a {
+  color: purple;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+ul:first-of-type a:hover {
+  color: purple;
+  text-decoration: underline;
+}
+
+/* Content sections */
+section,
+div {
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image galleries */
+.image-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.image-row > div {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+/* Images */
+img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Lists */
+ol,
+ul {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+ol li,
+ul li {
+  margin: 8px 0;
+  color: #555;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: purple;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr:hover {
+  background-color: #e8f4f8;
+}
+
+/* Form */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+}
+
+fieldset {
+  border: 2px solid purple;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+legend {
+  color: purple;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0 5px 0;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 5px 0 15px 0;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: purple;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 8px 0 0;
+  transform: scale(1.2);
+}
+
+textarea {
+  max-width: 100%;
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="submit"] {
+  background-color: purple;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: purple;
+}
+
+/* Links */
+a {
+  color: purple;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .image-row {
+    flex-direction: column;
+  }
+
+  .image-row > div {
+    min-width: auto;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <h1> The lily🎀 website </h1>
+
+  <p> Welcome to the lily website. Everything you want to know about me is in this website.  </p>
+  <p>,,okay just the basics lol🌝</p>
+
+<br>
+
+  <ul>
+    <li> <a href="#Basic"> Basic section </a> </li>
+    <li> <a href="#Interests"> Interests section </a> </li>
+    <li> <a href="#Likes and dislikes"> Likes and dislikes section </a> </li>
+    <li> <a href="#Social media"> Social media </a> </li>
+  </ul>
+
+  <!-- This is the start of the html code for the second section and we will start each section with a header tag -->
+  <h2> <a name="Basic"> Basics.</a> </h2>
+  <p> My name is Lilian 23F. I live in Nairobi, Kenya. I love tea,, all tea</p>
+  <p> My birthday is on March 15<sup>th</sup>. </p>
+  <p> ,,and this is my first website,, obviii😂</p>
+
+  <h2> <a name="Interests"> My Interests.</a> </h2>
+  <p> The following are my Interests: </p>
+
+  <ol>
+    <li> Cars </li>
+	<div class="image-row">
+    <div>
+    <ul>
+      <li> Sports Cars </li>
+      <h5> Dodge Challenger </h5>
+       <img src="dodge challenger.jpg" width="200" height="200">
+	</div>
+</ul>
+	<div>
+        <ul>
+      <li> Luxury Cars </li>
+      <h5> Rolls Royce Ghost </h5>
+       <img src="Rolls Royce Ghost.jpg" width="170" height="200">
+	</div>
+    </ul>
+	<div>
+        <ul>
+      <li> Trucks </li>
+      <h5> GMC Sierra </h5>
+       <img src="GMC Sierra.jpg" width="240" height="200">
+	</div>
+    </ul>
+	</div>
+    
+    <li> Fashion </li>
+    <div class="image-row">
+    <div>
+    <ul>
+      <li> Opium Fashion </li>
+      <h5> Opium </h5>
+       <img src="opium fashion.jpg" width="200" height="200"> 
+       </div>
+    </ul>
+       <div>
+        <ul>
+      <li> Street Fashion </li>
+      <h5> Baddie streetwear </h5>
+       <img src="streetwear.jpg" width="200" height="200"> 
+       </div>
+    </ul>
+       <div>
+        <ul>
+      <li> African Fashion </li>
+      <h5> Ankara </h5>
+       <img src="African wear.jpg" width="150" height="200"> 
+       </div>
+    </ul>
+    </div>
+    
+    <li> Food </li>
+    <div class="image-row">
+    <div>
+    <ul>
+      <li> Seafood </li>
+      <h5> Seafood boil </h5>
+      <img src="Seafood.jpg" width="200" height="200"> 
+      </div>
+    </ul>
+    <div>
+        <ul>
+      <li> Sreet Food </li>
+      <h5> Fries </h5>
+       <img src="Street food.jpg" width="270" height="200"> 
+        </div>
+    </ul>
+    <div>
+        <ul>
+      <li> Chinese Food </li>
+      <h5> Pork belly </h5>
+      <img src="Chinese food.jpg" width="200" height="200"> 
+      </div>
+    </ul>
+  </ol>
+
+  <h2> <a name="Likes and dislikes"> My Likes and dislikes.</a> </h2>
+  <p> Here's a list of my likes and dislikes; </p>
+
+  <table>
+    <tr>
+      <th> Likes </th>
+      <th> Dislikes </th>
+    </tr>
+    <tr>
+      <td> Meeeee❤ </td>
+      <td> Periods😣 </td>
+    </tr>
+    <tr>
+      <td> Podcasts😌 </td>
+      <td> Bugs😒 </td>
+    </tr>
+    <tr>
+      <td> Flowers😍 </td>
+      <td> Ugly fish😂 </td>
+    </tr>
+    <tr>
+  </table>
+
+  <h2> <a name="Social media"> Social media </a> </h2>
+  <p> Find me on telegram 
+    <a href="https://t.me/Heystinkky">Lilian's telegram </a>
+  </p>
+
+<form action="" method="">
+<fieldset>
+<legend> <b> Tell me about you: </b> </legend>
+
+<label for="firstname">First name:</label>
+<input type="text" id="firstname name="">
+
+<label for="lastname">Last name:</label>
+<input type="text" id="lastname name=""></br> </br>
+
+<label for="gender">Gender:</label>
+Male:
+<input type="radio" name="maleorfemale" value">
+Female:
+<input type="radio" name="maleorfemale" value"></br></br>
+
+<label for="age">Age:</label>
+<input type="number" min="18"></br></br>
+
+Enter date of birth:
+<input type=""date"> </br></br>
+
+What are your interests?</br>
+<input type="checkbox" name=""> fashion </br>
+<input type="checkbox" name=""> art </br>
+<input type="checkbox" name=""> law </br>
+<input type="checkbox" name=""> fitness </br></br>
+
+How did you find me?
+<select>
+  <option value="Instagram"> Instagram </option>
+  <option value="Tiktok"> Tiktok </option>
+  <option value="X"> X </option>
+  <option value="Reddit"> Reddit </option>
+  <option value="Refferal"> Refferal </option>
+</select></br></br>
+
+Comments: </br>
+<textarea rows="10" cols="50"></textarea> </br>
+
+<input type="submit" value="submit"">
+</fieldset>
+</form>
+
+</body>
+</html>
